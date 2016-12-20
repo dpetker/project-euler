@@ -7,11 +7,9 @@ TEST = 600851475143
 curr_factor = int(round(TEST / 2, 2))
 
 while curr_factor > 1:
-  if TEST % curr_factor == 0 and is_prime(curr_factor):
-    print('Largest prime factor of {} is {}'.format(TEST, curr_factor))
+  if TEST % curr_factor == 0 and curr_factor % 2 != 0 and is_prime(curr_factor):
     break
 
   curr_factor -= 1
 
-
-print(is_prime(TEST))
+print('Largest prime factor of {} is {}'.format(TEST, curr_factor))
