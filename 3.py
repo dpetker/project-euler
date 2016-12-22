@@ -1,15 +1,22 @@
 # Soultion for Project Euler Problem #3 - https://projecteuler.net/problem=3
+# Algorithm adapted from - http://stackoverflow.com/questions/23287/largest-prime-factor-of-a-number
 # (c) 2016 dpetker
 
-from util.primes import is_prime
+ORIGINAL = 600851475143
+test = ORIGINAL
+factors = []
+divisor = 2
 
-TEST = 600851475143
-curr_factor = int(round(TEST / 2, 2))
+while test > 1:
+  while test % divisor == 0:
+    factors.append(divisor)
+    test /= divisor
 
-while curr_factor > 1:
-  if TEST % curr_factor == 0 and curr_factor % 2 != 0 and is_prime(curr_factor):
-    break
+  divisor += 1
 
-  curr_factor -= 1
+  if divisor * divisor > test:
+    if test > 1:
+      factors.append(test)
+      break
 
-print('Largest prime factor of {} is {}'.format(TEST, curr_factor))
+print('Largest prime factor of {} is {}'.format(ORIGINAL, max(factors)))
