@@ -1,9 +1,6 @@
 # Soultion for Project Euler Problem #4 - https://projecteuler.net/problem=4
 # (c) 2016 dpetker
 
-op1 = 999
-op2 = 999
-
 curr_max = 0
 
 for i in range(999, 0, -1):
