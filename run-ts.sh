@@ -7,5 +7,5 @@ if [[ $# -eq 0 ]] ; then
   exit 1
 fi
 
-tsc typescript/$1.ts
-node typescript/$1.js
+tsc --outDir typescript/bin typescript/$1.ts
+node typescript/bin/$1.js
