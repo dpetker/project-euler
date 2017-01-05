@@ -1,6 +1,6 @@
 # Project Euler
 
-Project Euler solutions. Mostly a testbed for trying languages I might not get to use otherwise
+Project Euler solutions. Mostly a testbed for trying languages I might not get to use otherwise.
 
 ## Setup
 
