@@ -1,9 +1,9 @@
 // Soultion for Project Euler Problem #1 - https://projecteuler.net/problem=1
 // (c) 2017 dpetker
 
-var sum = 0;
+let sum: number = 0;
 
-for (var i = 1; i < 1000; i++) {
+for (let i: number = 1; i < 1000; i++) {
   if ((i % 3) === 0 || (i % 5) === 0) {
     sum += i
   }
